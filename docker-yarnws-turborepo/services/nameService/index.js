@@ -6,7 +6,7 @@ const init = async () => {
 
     const server = Hapi.server({
         port: 3001,
-        host: 'localhost'
+        host: 'localhost', 
     });
 
     server.route({
@@ -14,7 +14,10 @@ const init = async () => {
         path: '/name',
         handler: (request, h) => {
 
-            return 'Ruben';
+            return {name: 'Ruben'};
+        }, 
+        options: {
+        cors: true
         }
     });
 

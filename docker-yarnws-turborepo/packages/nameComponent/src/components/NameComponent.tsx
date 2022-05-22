@@ -5,10 +5,10 @@ export const Name = () => {
 
 
     React.useEffect(() => {
-        fetch("http://localhost:3000/name").then(data => data.json()).then(name => { console.log(name); setName(name) });
+        fetch("http://localhost:3001/name").then(data => data.json()).then(data => setName(data.name));
     }, []);
 
 
     if (!name) return null;
-    return <h1>My name is not Ruben</h1>;
+    return <h1>My name is {name}</h1>;
 };
