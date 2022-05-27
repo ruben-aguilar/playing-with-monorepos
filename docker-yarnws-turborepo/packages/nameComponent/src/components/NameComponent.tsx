@@ -10,5 +10,5 @@ export const Name = () => {
 
 
     if (!name) return null;
-    return <h1>My name is {name} NOT UPDATED</h1>;
+    return <h1>My name is {name}</h1>;
 };

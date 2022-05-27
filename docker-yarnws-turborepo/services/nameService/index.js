@@ -13,7 +13,6 @@ const init = async () => {
         method: 'GET',
         path: '/name',
         handler: (request, h) => {
-            console.log("calling to endpoint new")
             return {name: 'Ruben'};
         }, 
         options: {

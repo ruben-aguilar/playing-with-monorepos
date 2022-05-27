@@ -1,5 +1,5 @@
 {
-  "name": "cra-app-shell",
+  "name": "cra-shell-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

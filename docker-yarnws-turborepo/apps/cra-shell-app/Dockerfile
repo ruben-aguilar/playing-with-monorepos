@@ -2,13 +2,11 @@ FROM nginx:alpine as prod
 
 WORKDIR /app
 
-RUN cd build
-
-COPY . .
+COPY ./build ./static
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
-FROM alpine:latest as dev
+FROM alpine:latest as devdoc
 
 RUN apk update
 RUN apk add nodejs npm yarn
