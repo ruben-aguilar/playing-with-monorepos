@@ -10,7 +10,7 @@ FROM base as prod
 RUN mkdir /src
 
 COPY ./package.json /src
-COPY ../../yarn.lock src
+COPY ./yarn.lock /src
 
 RUN cd /src; yarn
 
