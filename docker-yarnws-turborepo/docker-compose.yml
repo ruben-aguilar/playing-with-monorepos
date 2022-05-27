@@ -1,0 +1,29 @@
+version: '3.8'
+
+services: 
+  cra-app-shell: 
+    build: 
+      context: "./apps/cra-app-shell"
+      target: "dev"
+    command: "yarn dev"
+    ports:
+      - "3000:3000"
+    working_dir: /root/app/apps/cra-app-shell
+    volumes: 
+      - .:/root/app
+  name-component: 
+    build: 
+      context: "./packages/nameComponent"
+    working_dir: /root/app/packages/nameComponent
+    volumes: 
+      - .:/root/app
+  name-service: 
+    build: 
+      context: "./services/nameService"
+      target: "base"
+    command: "yarn dev"
+    ports: 
+      - '3001:3001'
+    working_dir: /root/app/services/nameService
+    volumes: 
+      - .:/root/app

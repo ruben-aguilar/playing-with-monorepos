@@ -4,6 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "test": "yarn turbo run test", 
+    "dev": "yarn && yarn turbo run build --filter=./packages && docker-compose up",
+    "build": "yarn turbo run build"
+  }, 
   "workspaces": [
     "apps/*",
     "services/*",
