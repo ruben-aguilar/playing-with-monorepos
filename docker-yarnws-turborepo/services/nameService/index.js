@@ -1,8 +1,7 @@
 "use strict";
 
-const nameGenerator = require("name-generator");
-
 const Hapi = require("@hapi/hapi");
+const nameGenerator = require("name-generator");
 
 const init = async () => {
   const server = Hapi.server({

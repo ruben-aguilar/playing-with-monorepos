@@ -8,10 +8,8 @@ RUN apk add nodejs npm yarn
 FROM base as prod 
 
 RUN mkdir /src
-
 COPY ./package.json /src
-
-RUN cd /src
+ADD node_modules.tar.gz /src/
 
 COPY ./index.js /src
 
