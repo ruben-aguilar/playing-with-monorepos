@@ -4,12 +4,17 @@
   "main": "index.js",
   "author": "ruben",
   "license": "MIT",
+  "private": true,
   "dependencies": {
-    "@hapi/hapi": "^20.2.2"
+    "@hapi/hapi": "^20.2.2",
+    "name-generator": "*"
+  },
+  "workspaces": {
+    "nohoist": ["**"]
   },
   "scripts": {
     "start": "docker run -it -p 3001:3001 name-service",
-    "build": "cp ../../yarn.lock . && docker build -t name-service . && rm yarn.lock",
+    "build": "docker build -t name-service .",
     "dev": "nodemon -L index.js"
   },
   "devDependencies": {

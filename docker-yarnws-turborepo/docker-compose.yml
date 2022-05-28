@@ -1,14 +1,14 @@
 version: '3.8'
 
 services: 
-  cra-app-shell: 
+  cra-shell-app: 
     build: 
-      context: "./apps/cra-app-shell"
+      context: "./apps/cra-shell-app"
       target: "dev"
     command: "yarn dev"
     ports:
       - "3000:3000"
-    working_dir: /root/app/apps/cra-app-shell
+    working_dir: /root/app/apps/cra-shell-app
     volumes: 
       - .:/root/app
   name-component: 
