@@ -1,0 +1,4 @@
+{
+    "ignore": [".git", ".turbo", "package.json"], 
+    "ignoreRoot": [".git"]
+}
